@@ -14,6 +14,7 @@
 
 
 ANDROID_NDK_HOME = /home/user/android-ndk-r10e/android-ndk-r10e
+PROJECT_ROOT_DIR = /home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android
 
 am__is_gnu_make = test -n '$(MAKEFILE_LIST)' && test -n '$(MAKELEVEL)'
 am__make_running_with_option = \
@@ -145,19 +146,17 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android/missing aclocal-1.14
+ACLOCAL = ${SHELL} ${PROJECT_ROOT_DIR}/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android/missing autoconf
-AUTOHEADER = ${SHELL} /home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android/missing autoheader
-AUTOMAKE = ${SHELL} /home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android/missing automake-1.14
+AUTOCONF = ${SHELL} ${PROJECT_ROOT_DIR}/missing autoconf
+AUTOHEADER = ${SHELL} ${PROJECT_ROOT_DIR}/missing autoheader
+AUTOMAKE = ${SHELL} ${PROJECT_ROOT_DIR}/missing automake-1.14
 AWK = mawk
-#CC = /usr/bin/arm-linux-gnueabi-gcc
 CC = $(ANDROID_NDK_HOME)/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc
-CFLAGS = -fPIC -pie -shared -g -O2 -nostdlib -I$(ANDROID_NDK_HOME)/platforms/android-21/arch-arm/usr/include -I/home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android/src/include -DFUSE_USE_VERSION=28 -D_FUSE_H_
-#CPP = /usr/bin/arm-linux-gnueabi-gcc -E
+CFLAGS = -fPIC -pie -shared -g -O2 -nostdlib -I$(ANDROID_NDK_HOME)/platforms/android-21/arch-arm/usr/include -I${PROJECT_ROOT_DIR}/src/include -DFUSE_USE_VERSION=28 -D_FUSE_H_
 CPP = $(ANDROID_NDK_HOME)/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc -E
-CPPFLAGS =  -I$(ANDROID_NDK_HOME)/platforms/android-21/arch-arm/usr/include -I/home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android/src/include
+CPPFLAGS =  -I$(ANDROID_NDK_HOME)/platforms/android-21/arch-arm/usr/include -I${PROJECT_ROOT_DIR}/src/include
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
@@ -167,7 +166,7 @@ ECHO_T =
 EGREP = /bin/grep -E
 EXEEXT =  .so
 FUSE_CFLAGS = -D_FILE_OFFSET_BITS=64   
-LD_FLAGS =-L/home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android/libs -L$(ANDROID_NDK_HOME)/platforms/android-21/arch-arm/usr/lib
+LD_FLAGS =-L${PROJECT_ROOT_DIR}/libs -L$(ANDROID_NDK_HOME)/platforms/android-21/arch-arm/usr/lib
 GREP = /bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
@@ -178,7 +177,7 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LDFLAGS =  -Wl,--sysroot=$(ANDROID_NDK_HOME)/platforms/android-21/arch-arm -Wl,-rpath-link=$(ANDROID_NDK_HOME)/platforms/android-21/arch-arm/usr/lib  -L$(ANDROID_NDK_HOME)/platforms/android-21/arch-arm/usr/lib
 LIBOBJS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android/missing makeinfo
+MAKEINFO = ${SHELL} ${PROJECT_ROOT_DIR}/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = libfuse
@@ -192,15 +191,12 @@ PKG_CONFIG_LIBDIR =
 PKG_CONFIG_PATH = 
 SET_MAKE = 
 SHELL = /bin/bash
-#STRIP = /usr/bin/arm-linux-gnueabi-strip
 STRIP = $(ANDROID_NDK_HOME)/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc/arm-linux-androideabi-strip
 VERSION = 2016-04-01
-abs_builddir = /home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android/src
-abs_srcdir = /home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android/src
-abs_top_builddir = /home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android
-abs_top_srcdir = /home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android
-#ac_ct_CC = /usr/bin/arm-linux-gnueabi-gcc
-ac_ct_CC = $(ANDROID_NDK_HOME)/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc
+abs_builddir = ${PROJECT_ROOT_DIR}/src
+abs_srcdir = ${PROJECT_ROOT_DIR}/src
+abs_top_builddir = ${PROJECT_ROOT_DIR}
+abs_top_srcdir = ${PROJECT_ROOT_DIR}
 am__leading_dot = .
 am__quote = 
 am__tar = $${TAR-tar} chof - "$$tardir"
@@ -216,7 +212,7 @@ exec_prefix = ${prefix}
 host_alias = 
 htmldir = ${docdir}
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/user/Desktop/starteam-en-14.0.3-java/bin/C:/StarteamCM/fuse-android/install-sh
+install_sh = ${SHELL} ${PROJECT_ROOT_DIR}/install-sh
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
