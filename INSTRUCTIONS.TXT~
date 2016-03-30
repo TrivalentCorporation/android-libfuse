@@ -1,0 +1,11 @@
+Once you have downloaded this source package from Github, follow these build instructions.
+
+1) Open <SOURCE_ROOT>/Makefile
+2) Modify the PROJECT_ROOT_DIR variable to point to wherever you downloaded the source package into, ie. <SOURCE_ROOT>
+3) Save the change above.
+4) Download the Android NDK (Native Development Kit), version r10e or later. This is needed to use the Android ARM-eabi gcc compiler, and also reference Android's header files. 
+5) Open <SOURCE_ROOT>/src/Makefile
+6) Modify the PROJECT_ROOT_DIR variable to point to wherever you downloaded the source package into, ie. <SOURCE_ROOT>
+7) Modify the ANDROID_NDK_HOME variable to point to whatever you downloaded the Android NDK.
+8) The original author of these instructions compiled on a 64-bit Linux machine. If you are on a 64-bit Linux machine, you do not need to make further changes.
+9) If not, you will need to further modify the CC, CPP, and STRIP variables to point to the NDK toolchain specific to your machine.
