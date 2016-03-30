@@ -12,3 +12,7 @@ Note - if you do not have Make installed, you must first install it.
 7) Modify the ANDROID_NDK_HOME variable to point to whatever you downloaded the Android NDK.
 8) The original author of these instructions compiled on a 64-bit Linux machine. If you are on a 64-bit Linux machine, you do not need to make further changes.
 9) If not, you will need to further modify the CC, CPP, and STRIP variables to point to the NDK toolchain specific to your machine.
+
+
+Finally, run "make clean" and then "make" in either <SOURCE_ROOT> or <SOURCE_ROOT>/src.
+If those commands run without error, you should see a bunch of object files (.o files) in <SOURCE_ROOT>/src, as well as the final libfuse.so.
